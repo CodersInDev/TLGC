@@ -1,0 +1,34 @@
+{
+  "name": "TLGC",
+  "version": "1.0.0",
+  "description": "The Leaving Gift Company application",
+  "main": "lib/start.js",
+  "scripts": {
+    "test": "node node_modules/lab/bin/lab -a code -L",
+    "start": "node lib/start.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CodersInDev/TLGC.git"
+  },
+  "keywords": [
+    "the",
+    "leaving",
+    "gift",
+    "company"
+  ],
+  "author": "CodersInDev",
+  "license": "Copyright The Leaving Gift Company 2015",
+  "bugs": {
+    "url": "https://github.com/CodersInDev/TLGC/issues"
+  },
+  "homepage": "https://github.com/CodersInDev/TLGC",
+  "dependencies": {
+    "hapi": "^9.0.3",
+    "hoek": "^2.14.0"
+  },
+  "devDependencies": {
+    "code": "^1.5.0",
+    "lab": "^5.15.2"
+  }
+}
