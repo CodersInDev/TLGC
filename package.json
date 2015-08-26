@@ -4,7 +4,7 @@
   "description": "The Leaving Gift Company application",
   "main": "lib/start.js",
   "scripts": {
-    "test": "node node_modules/lab/bin/lab -a code -L -c",
+    "test": "node node_modules/lab/bin/lab -a code -L",
     "start": "node lib/start.js"
   },
   "repository": {
