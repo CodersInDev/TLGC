@@ -14,3 +14,7 @@ Returns home page on the "/" path.
 #### Campaign
 
 Returns campaign page on the "/campaign" path.
+
+#### Donate
+
+Returns the donation form page on the "/donate" path.
