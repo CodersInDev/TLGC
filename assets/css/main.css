@@ -1,3 +1,59 @@
-h1 {
-    color: red;
+body {
+  padding-top: 50px;
 }
+
+/******** Content section *********/
+.content h1 {
+    text-align: center;
+}
+.content {
+    text-align: center;
+}
+.content ul {
+    list-style-type: none;
+}
+.iframe {
+    width: 520px;
+    height: 315px;
+    margin: 0 auto;
+    margin: 20px;
+}
+.create-btn {
+    margin-bottom: 20px;
+}
+/******** End Content section *********/
+
+/******** Logo section *********/
+.logo-section{
+    background-color: #fff;
+    text-align: center;
+}
+.logo-section > .container {
+    background-color: #fff;
+}
+#logo {
+    background: url('../img/logo.png') no-repeat;
+    width: 169px;
+    height: 169px;
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+/******** End Logo section *********/
+
+
+/******** Footer section *********/
+footer {
+    height: 50px;
+    background-color: #f5f5f5;
+}
+.center {
+    text-align: center;
+}
+footer p {
+    margin: 20px 0;
+}
+
+/******** End Footer section *********/
