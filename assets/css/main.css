@@ -35,7 +35,7 @@ body {
   color: #fff;
   border: none;
 }
-.navbar-btn:hover, .create-btn:hover, .btn-home:hover, .start_campaign:hover {
+.navbar-btn:hover, .create-btn:hover, .btn-home:hover, .start_campaign:hover, .share-btn:hover {
   background-color: #298622;
   color: #fff;
 }
@@ -48,10 +48,13 @@ body {
     margin: 20px auto;
     padding: 10px 40px;
 }
-.start_campaign {
+.start_campaign, .share-btn, .donate-btn {
     background-color: #3ba933;
     color: #fff;
     border: none;
+}
+.share-btn {
+    width: 15ch;
 }
 /******** Logo section *********/
 .logo-section{
@@ -77,7 +80,7 @@ body {
 
 footer {
     background-color: lightgrey;
-  
+
 }
 .copyright p {
     padding-top: 10px;
@@ -115,7 +118,29 @@ footer {
 }
 /******** End Campaign page *********/
 
+/******** Donate page *********/
+.badge {
+    min-width: 40px;
+    padding: 6px 7px;
+}
 
+.right {
+    float: right;
+}
+.left {
+    float: left;
+}
+
+table, form{
+/*width: auto !important;*/
+margin: 0 auto
+}
+
+.formDonate {
+    padding: 30px;
+}
+
+/******** End Donate page *********/
 
 @media(max-width:360px){
 
