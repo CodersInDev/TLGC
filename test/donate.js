@@ -16,7 +16,6 @@ it('checks the route /donate returns 200 status code when requested', function (
         server.inject('/donate', function (res) {
 
             expect(res.statusCode).to.equal(200);
-            expect(res.result).to.equal('This is the donation form');
         });
 
         server.stop(done);
