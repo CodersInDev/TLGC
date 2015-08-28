@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+    <title>The Leaving Gift Company</title>
 
     <!-- Bootstrap -->
 
@@ -70,20 +70,6 @@
                                 </select>
                             </div>
                         </div>
-                        <!--<div class="form-group">-->
-                            <!--<div class="col-xs-4">-->
-                                <!--<div class="checkbox">-->
-                                    <!--<input type="radio" name="optionsRadiosinline" id="radio1"-->
-                                           <!--value="option2"> You decide-->
-                                <!--</div>-->
-                            <!--</div>-->
-                            <!--<div class="col-xs-4 col-xs-offset-4">-->
-                                <!--<div class="checkbox">-->
-                                    <!--<input type="radio" name="optionsRadiosinline" id="optionsRadios4"-->
-                                           <!--value="option2">  We decide-->
-                                <!--</div>-->
-                            <!--</div>-->
-                        <!--</div>-->
 
 
                         <div class="form-group">
@@ -166,31 +152,44 @@
                                 <div class="checkbox">
                                     <label>
                                         <input type="checkbox" value="">
-                                        I agree to the T&C
+                                        I agree to the <a href="#" data-toggle="modal" data-target="#termCondModal">T&C</a>
                                     </label>
                                 </div>
                             </div>
                         </div>
 
+                        <!-- Modal -->
+                        <div class="modal fade" id="termCondModal" tabindex="-1" role="dialog" aria-labelledby="TLGC Terms and Conditions">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="myModalLabel">TLGC Terms and Conditions</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec sapien maximus, sagittis leo non, tincidunt tortor. Curabitur convallis posuere lorem interdum sodales. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam erat volutpat. Morbi ornare neque sit amet sagittis euismod. Donec pharetra viverra luctus. Proin turpis ex, tincidunt eget metus sit amet, pretium dapibus purus. Proin mollis molestie neque et congue.
+
+                                        Duis luctus odio sed tortor vestibulum, sed convallis nulla ultricies. Mauris velit mauris, convallis quis augue et, rutrum imperdiet enim. Etiam auctor erat ac dictum tempor. Vivamus varius, nunc ut rutrum gravida, nulla lectus congue orci, at bibendum quam arcu at nunc. Aliquam consequat ut augue in dictum. Cras scelerisque cursus orci at sodales. Sed blandit fringilla dolor, eu consectetur urna vehicula interdum. Praesent malesuada pellentesque ex et varius. Donec ultrices, arcu at finibus bibendum, mauris lacus aliquet nunc, vel malesuada nulla magna id lorem. Phasellus eget mauris pulvinar, lobortis tellus sed, euismod sem.
+
+                                        Phasellus feugiat viverra fermentum. Proin eu sodales diam. Aliquam pharetra volutpat augue, et venenatis magna congue ut. Cras tincidunt sapien eu ex dapibus, at iaculis diam aliquam. Vestibulum vestibulum, nibh et interdum luctus, ligula elit pulvinar nisi, quis pulvinar orci dui a nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam porta et dui sed efficitur. Curabitur lacinia accumsan imperdiet. Donec eleifend ut ligula quis porta. Phasellus congue consequat diam quis porta. Sed mollis, purus quis tristique aliquam, odio tellus condimentum dui, quis fringilla ante velit laoreet nunc. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce sodales dolor in hendrerit dictum. Cras in lacus magna.
+                                    </div>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
 
 
-                        <!--<div class="well">-->
-                            <!--<div id="datetimepicker4" class="input-append">-->
-                                <!--<input data-format="yyyy-MM-dd" type="text"></input>-->
-                                <!--<span class="add-on">-->
-                                  <!--<i data-time-icon="icon-time" data-date-icon="icon-calendar">-->
-                                  <!--</i>-->
-                                <!--</span>-->
-                            <!--</div>-->
-                        <!--</div>-->
                         <div class="form-group">
                         <div class="col-xs-12">
                             <button type="button" class="btn btn-default btn-lg btn-block start_campaign">Start campaign</button>
                         </div>
 
                     </div>
-                    </form>
+            </form>
 
 
 
