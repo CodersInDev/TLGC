@@ -1,28 +1,57 @@
+/*html,body{*/
+    /*height: 100%*/
+/*}*/
 body {
-  padding-top: 50px;
+    padding-top: 50px;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+/*footer*/
+/*{*/
+    /*position: relative;*/
+    /*margin-top: -250px; /!* negative value of footer height *!/*/
+    /*height: 50px;*/
+    /*clear:both;*/
+    /*padding-top:20px;*/
+    /*color:#fff;*/
+/*}*/
+/*#form-area*/
+/*{*/
+    /*overflow:auto;*/
+    /*padding-bottom:250px; /!* this needs to be bigger than footer height*!/*/
+/*}*/
+/*strapline*/
+#strapline {
+  padding: 10px 15px;
+  text-align: center;
 }
 
-/******** Content section *********/
-.content h1 {
-    text-align: center;
+/*strapline*/
+
+.navbar-btn, .create-btn {
+  background-color: #3ba933;
+  margin-right: 20px;
+  color: #fff;
+  border: none;
 }
-.content {
-    text-align: center;
+.navbar-btn:hover, .create-btn:hover, .btn-home:hover, .start_campaign:hover {
+  background-color: #298622;
+  color: #fff;
 }
-.content ul {
-    list-style-type: none;
-}
-.iframe {
-    width: 520px;
-    height: 315px;
-    margin: 0 auto;
-    margin: 20px;
+.btn-home {
+    background-color: #3ba933;
+    margin-left: 20px;
+    color: #fff;
 }
 .create-btn {
-    margin-bottom: 20px;
+    margin: 20px auto;
+    padding: 10px 40px;
 }
-/******** End Content section *********/
-
+.start_campaign {
+    background-color: #3ba933;
+    color: #fff;
+    border: none;
+}
 /******** Logo section *********/
 .logo-section{
     background-color: #fff;
@@ -36,24 +65,62 @@ body {
     width: 169px;
     height: 169px;
     display: block;
-    margin: 0 auto;
+    margin: 15px auto;
     overflow: hidden;
     text-indent: 100%;
     white-space: nowrap;
 }
 /******** End Logo section *********/
 
-
 /******** Footer section *********/
+
 footer {
-    height: 50px;
-    background-color: #f5f5f5;
+    background-color: lightgrey;
 }
-.center {
+.copyright p {
+    padding-top: 10px;
+}
+/******** End Footer section *********/
+
+
+/******** Campaign page *********/
+
+::-webkit-input-placeholder {
+   text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
     text-align: center;
 }
-footer p {
-    margin: 20px 0;
+
+::-moz-placeholder {  /* Firefox 19+ */
+    text-align: center;
 }
 
-/******** End Footer section *********/
+:-ms-input-placeholder {
+    text-align: center;
+}
+
+.dropdown {
+    text-align: center;
+    color: #9C9898;
+}
+.dropdown-menu {
+    min-width: 125px;
+}
+.gender {
+    min-width: 104px;
+}
+/******** End Campaign page *********/
+
+
+
+@media(max-width:360px){
+
+    #logo {
+        background: url('../img/logo-mobile.png') no-repeat;
+        width: 109px;
+        height: 109px;
+
+    }
+}
