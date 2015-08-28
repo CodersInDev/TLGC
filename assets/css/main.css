@@ -104,7 +104,7 @@ footer {
 }
 
 .dropdown {
-    text-align: center;
+    text-align: center !important;
     color: #9C9898;
 }
 .dropdown-menu {
