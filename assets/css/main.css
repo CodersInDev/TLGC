@@ -48,7 +48,7 @@ body {
     margin: 20px auto;
     padding: 10px 40px;
 }
-.start_campaign, .share-btn {
+.start_campaign, .share-btn, .donate-btn {
     background-color: #3ba933;
     color: #fff;
     border: none;
@@ -80,7 +80,7 @@ body {
 
 footer {
     background-color: lightgrey;
-  
+
 }
 .copyright p {
     padding-top: 10px;
@@ -129,6 +129,15 @@ footer {
 }
 .left {
     float: left;
+}
+
+table, form{
+/*width: auto !important;*/
+margin: 0 auto
+}
+
+.formDonate {
+    padding: 30px;
 }
 
 /******** End Donate page *********/
