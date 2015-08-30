@@ -131,6 +131,10 @@ margin: 0 auto
     padding: 30px;
 }
 
+#donate-footer {
+    position: fixed;
+}
+
 /******** End Donate page *********/
 
 @media(max-width:360px){
