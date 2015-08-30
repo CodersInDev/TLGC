@@ -4,8 +4,9 @@
   "description": "The Leaving Gift Company application",
   "main": "lib/start.js",
   "scripts": {
-    "test": "node node_modules/lab/bin/lab -a code -L -c",
-    "start": "node lib/start.js"
+    "test": "node node_modules/lab/bin/lab -a code -L -c -r lcov -o lcov.info -r console -o stdout",
+    "start": "node lib/start.js",
+    "codeclimate": "CODECLIMATE_REPO_TOKEN=4c7ce38d1f390d773bd417f6b4fcdbe623edf15674017c18a05e78a61623f255 ./node_modules/codeclimate-test-reporter/bin/codeclimate.js < ./lcov.info"
   },
   "repository": {
     "type": "git",
@@ -33,6 +34,7 @@
   },
   "devDependencies": {
     "code": "^1.5.0",
+    "codeclimate-test-reporter": "^0.1.0",
     "lab": "^5.15.2"
   }
 }
