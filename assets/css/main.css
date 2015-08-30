@@ -1,33 +1,21 @@
-/*html,body{*/
-    /*height: 100%*/
-/*}*/
+html {
+    position: relative;
+    min-height: 100%;
+}
 body {
     padding-top: 50px;
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
-
+    margin-bottom: 50px;
 }
-/*footer*/
-/*{*/
-    /*position: relative;*/
-    /*margin-top: -250px; /!* negative value of footer height *!/*/
-    /*height: 50px;*/
-    /*clear:both;*/
-    /*padding-top:20px;*/
-    /*color:#fff;*/
-/*}*/
-/*#form-area*/
-/*{*/
-    /*overflow:auto;*/
-    /*padding-bottom:250px; /!* this needs to be bigger than footer height*!/*/
-/*}*/
-/*strapline*/
+
+/********strapline********/
 #strapline {
   padding: 10px 15px;
   text-align: center;
 }
 
-/*strapline*/
+/*******end of strapline*********/
 
 .navbar-btn, .create-btn {
   background-color: #3ba933;
@@ -80,7 +68,10 @@ body {
 
 footer {
     background-color: lightgrey;
-
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height:50px;
 }
 .copyright p {
     padding-top: 10px;
@@ -138,6 +129,10 @@ margin: 0 auto
 
 .formDonate {
     padding: 30px;
+}
+
+#donate-footer {
+    position: fixed;
 }
 
 /******** End Donate page *********/
