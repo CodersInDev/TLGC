@@ -184,7 +184,10 @@ table, form{
         width: 109px;
         height: 109px;
     }
-     #atAGlance .atAGlance-share {
+    #atAGlance .atAGlance-share {
+        text-align: center;
+    }
+    #atAGlance .col-xs-12 {
         text-align: center;
     }
     .col-xs-4 {
