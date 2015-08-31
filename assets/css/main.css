@@ -52,15 +52,22 @@ body {
 .logo-section > .container {
     background-color: #fff;
 }
-#logo {
-    background: url('../img/logo.png') no-repeat;
-    width: 169px;
-    height: 169px;
+#logo, #logo-donate {
     display: block;
     margin: 15px auto;
     overflow: hidden;
     text-indent: 100%;
     white-space: nowrap;
+}
+#logo {
+    background: url('../img/logo.png') no-repeat;
+    width: 169px;
+    height: 169px;
+}
+#logo-donate {
+    background: url('../img/logo-mobile.png') no-repeat;
+    width: 109px;
+    height:109px;
 }
 /******** End Logo section *********/
 
@@ -110,6 +117,10 @@ footer {
 /******** End Campaign page *********/
 
 /******** Donate page *********/
+#strapline-donate{
+    text-align: center;
+    padding-top: 30px;
+}
 .badge {
     min-width: 40px;
     padding: 6px 7px;
@@ -123,16 +134,45 @@ footer {
 }
 
 table, form{
-/*width: auto !important;*/
-margin: 0 auto
+    /*width: auto !important;*/
+    margin: 0 auto
 }
 
 .formDonate {
     padding: 30px;
 }
 
+.badge-donate {
+    min-width: 112px;
+    background-color: #3ba933;
+}
+.badge-total {
+    background-color: #3ba933;
+}
+.atAGlance-row {
+    padding:10px;
+}
+
+.formDonate button {
+    text-align: center;
+}
+.donate-body{
+    margin-bottom: 60px;
+}
 #donate-footer {
     position: fixed;
+}
+
+.footer-date {
+    padding-left: 10px;
+}
+.footer-total {
+    padding-right: 10px;
+}
+.footer-share {
+    background-color: #3ba933;
+    min-width: 150px;
+    font-size: 14px;
 }
 
 /******** End Donate page *********/
@@ -143,6 +183,27 @@ margin: 0 auto
         background: url('../img/logo-mobile.png') no-repeat;
         width: 109px;
         height: 109px;
+    }
+    #atAGlance .atAGlance-share {
+        text-align: center;
+    }
+    #atAGlance .col-xs-12 {
+        text-align: center;
+    }
+    .col-xs-4 {
+        font-size: 12px;
+    }
+    .footer-share {
+        min-width: 90px;
+    }
+    .formDonate .donate-btn {
+        display: block;
+        width: 100%;
+    }
+}
 
+@media(max-width:768px){
+    #atAGlance .col-xs-12 {
+        padding-top: 10px;
     }
 }
