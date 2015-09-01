@@ -16,27 +16,27 @@
                 <form action="/campaign" method="POST" class="form-horizontal">
                     <div class="form-group">
                         <div class="col-xs-12">
-                            <input type="email" class="form-control" id="inputEmail" placeholder="Your email">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Your email">
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-xs-12 ">
-                            <input type="text" class="form-control" id="name" placeholder="Your name">
+                            <input type="text" class="form-control" id="initiatorName" name="initiatorName" placeholder="Your name">
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-xs-12 ">
-                            <input type="text" class="form-control" id="leaver" placeholder="Name of leaver">
+                            <input type="text" class="form-control" id="leaverName" name="leaverName" placeholder="Name of leaver">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <div class="col-xs-12 ">
-                            <select class="form-control dropdown">
-                                <option value="">Reason for leaving</option>
-                                <option value="">option1</option>
-                                <option value="">option2</option>
-                                <option value="">option2</option>
+                            <select name="reasonForLeaving" class="form-control dropdown">
+                                <option disabled selected value="">Reason for leaving</option>
+                                <option value="option1">option1</option>
+                                <option value="option2">option2</option>
+                                <option value="option3">option2</option>
                             </select>
                         </div>
                     </div>
@@ -50,10 +50,10 @@
 
                         <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
                             <label class="radio-inline pull-left">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> You decide
+                                <input type="radio" name="decision" id="youDecide" value="youDecide"> You decide
                             </label>
                             <label class="radio-inline pull-right">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> We decide
+                                <input type="radio" name="decision" id="weDecide" value="weDecide"> We decide
                             </label>
                         </div>
                     </div>
@@ -61,7 +61,7 @@
 
                     <div class="form-group">
                         <div class="col-xs-12">
-                            <textarea class="form-control" rows="3" placeholder="Gift proposition"></textarea>
+                            <textarea class="form-control" rows="3" placeholder="Gift proposition" name="giftProposition"></textarea>
                         </div>
                     </div>
 
@@ -70,33 +70,51 @@
                     <div class="form-group">
                         <div class="col-xs-6">
                             <div class="pull-left">
-                                <select class="form-control dropdown">
+                                <select name="age" class="form-control dropdown">
                                     <option disabled selected value="">Age range</option>
-                                    <option value="">Under 18</option>
-                                    <option value="">18 - 24</option>
-                                    <option value="">25 - 30</option>
-                                    <option value="">31 - 40</option>
-                                    <option value="">41 - 50</option>
-                                    <option value="">51 - 60</option>
-                                    <option value="">Over 60</option>
-                                    <option value="">Don't know</option>
+                                    <option value="18">Under 18</option>
+                                    <option value="24">18 - 24</option>
+                                    <option value="30">25 - 30</option>
+                                    <option value="40">31 - 40</option>
+                                    <option value="50">41 - 50</option>
+                                    <option value="60">51 - 60</option>
+                                    <option value="61">Over 60</option>
+                                    <option value="0">Don't know</option>
                                 </select>
                             </div>
                         </div>
                         <div class="col-xs-6">
                             <div class="pull-right">
-                                <select class="form-control dropdown">
+                                <select name="gender" class="form-control dropdown">
                                     <option disabled selected value="">Gender</option>
-                                    <option value="">Female</option>
-                                    <option value="">Male</option>
+                                    <option value="f">Female</option>
+                                    <option value="m">Male</option>
                                 </select>
                             </div>
                         </div>
                     </div>
 
                     <div class="form-group">
+                        <div class="col-xs-12 ">
+                            <input type="text" class="form-control" id="nameOfRecipient" name="nameOfRecipient" placeholder="Name of recipient">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
                         <div class="col-xs-12">
-                            <textarea class="form-control" rows="2" placeholder="Address to deliver"></textarea>
+                            <input type="text" class="form-control" id="address1" name="address1" placeholder="Address line 1">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <input type="text" class="form-control" id="address2" name="address2" placeholder="Address line 2">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+                            <input type="text" class="form-control" id="postCode" name="postCode" placeholder="Post Code">
                         </div>
                     </div>
 
@@ -106,11 +124,12 @@
                             <p>Explanation for delivery date <br/>
                             Lorem Ipsum has been the industry's standard dummy</p>
                             <div class='input-group date' id='datetimepicker4' >
-                                <input type='text' data-format="yyyy-MM-dd"  class="form-control" placeholder="Delivery date"/>
+                                <input type='text' data-format="yyyy-MM-dd"  name="deliveryDate" class="form-control" placeholder="Delivery date"/>
                                     <span class="input-group-addon">
                                         <span class="glyphicon glyphicon-calendar"></span>
                                     </span>
                             </div>
+                            <p>Campaign will end by 24 Sep 2015</p>
                         </div>
                     </div>
 
@@ -118,7 +137,7 @@
                         <div class="col-xs-12">
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" value="">
+                                    <input name="tc" type="checkbox" value="tc">
                                     I agree to the <a href="#" data-toggle="modal" data-target="#termCondModal">T&C</a>
                                 </label>
                             </div>
