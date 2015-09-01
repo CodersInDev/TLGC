@@ -33,7 +33,7 @@ it('checks for post request on /campaign endpoint that returns redirect code 302
             url: '/campaign'
         }, function (res) {
 
-            expect(res.statusCode).to.equal(302); 
+            expect(res.statusCode).to.equal(302);
         });
 
 
