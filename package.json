@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/CodersInDev/TLGC",
   "dependencies": {
+    "env2": "^2.0.2",
     "handlebars": "^3.0.3",
     "hapi": "^9.0.3",
     "hoek": "^2.14.0",
