@@ -22,3 +22,21 @@ it('checks the route /campaign returns 200 status code when requested', function
         server.stop(done);
     });
 });
+
+it('checks for post request on /campaign endpoint that returns redirect code 302', function (done) {
+
+    Server.init(0, function (err, server) {
+
+        expect(err).to.not.exist();
+        server.inject({
+            method: 'POST',
+            url: '/campaign'
+        }, function (res) {
+
+            expect(res.statusCode).to.equal(302); 
+        });
+
+
+        server.stop(done);
+    });
+});
