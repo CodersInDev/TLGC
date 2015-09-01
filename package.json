@@ -32,7 +32,6 @@
     "hoek": "^2.14.0",
     "inert": "^3.0.1",
     "redis": "^1.0.0",
-    "redis-connection": "^1.0.3",
     "views": "^1.0.2",
     "vision": "^3.0.0"
   },
