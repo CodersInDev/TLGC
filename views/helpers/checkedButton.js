@@ -1,6 +1,7 @@
 module.exports = function (value, option) {
 
-    if(value === option) {
+    if (value === option) {
+
         return 'checked';
     }
 
