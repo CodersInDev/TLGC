@@ -17,7 +17,7 @@
                     {{messageError}}
                 </p>
 
-                <form action="/campaign" method="POST" class="form-horizontal">
+                <form id="campaign-create" action="/campaign" method="POST" class="form-horizontal">
                     <div class="form-group">
                         <div class="col-xs-12">
                             <input type="email" class="form-control" id="email" name="email" placeholder="Your email" value={{email}}>
@@ -128,7 +128,7 @@
                             <p>Explanation for delivery date <br/>
                             Lorem Ipsum has been the industry's standard dummy</p>
                             <div class='input-group date col-xs-12' >
-                                <input id="datepicker" type='text' name="deliveryDate" class="form-control" placeholder="Delivery date" value={{deliveryDate}}/>
+                                <input id="datepicker" type='text' name="deliveryDate" class="form-control" placeholder="Delivery date" />
                                     <!-- <span class="input-group-addon">
                                         <span class="glyphicon glyphicon-calendar"></span>
                                     </span> -->
