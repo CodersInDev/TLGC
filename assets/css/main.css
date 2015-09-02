@@ -104,6 +104,10 @@ footer {
     text-align: center;
 }
 
+.error {
+    color: red;
+}
+
 .dropdown {
     text-align: center !important;
     color: #9C9898;
