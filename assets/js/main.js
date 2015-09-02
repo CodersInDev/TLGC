@@ -1,13 +1,15 @@
-
 (function () {
-
     'use strict';
 
-    $( document ).ready(function () {
+$( document ).ready(function () {
 
-        console.log( 'ready!' );
-        var d = new Date();
-        $('.js_year').text(d.getFullYear());
+    var d = new Date();
+    $('.js_year').text(d.getFullYear());
+    $( "#datepicker" ).datepicker({
+        dateFormat: "dd-mm-yy"
     });
-
+    $("#datepicker").keypress(function(e) {
+        e.preventDefault();
+    });
+});
 })();
