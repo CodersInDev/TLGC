@@ -24,8 +24,8 @@ body {
   border: none;
 }
 .navbar-btn:hover, .create-btn:hover, .btn-home:hover, .start_campaign:hover, .share-btn:hover {
-  background-color: #298622;
-  color: #fff;
+    background-color: #298622;
+    color: #fff;
 }
 .btn-home {
     background-color: #3ba933;
@@ -176,6 +176,15 @@ table, form{
 }
 
 /******** End Donate page *********/
+
+/******** Admin page *******/
+
+li {
+    list-style-type: none;
+}
+
+/******** End Admin page *******/
+
 
 @media(max-width:360px){
 
