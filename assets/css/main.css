@@ -23,6 +23,9 @@ body {
   color: #fff;
   border: none;
 }
+.btn-contact {
+    margin-left: 20px;
+}
 .navbar-btn:hover, .create-btn:hover, .btn-home:hover, .start_campaign:hover, .share-btn:hover, #donation-btn-slide, .submit-payment {
   background-color: #298622;
   color: #fff;
@@ -87,7 +90,9 @@ footer {
 
 
 /******** Campaign page *********/
-
+#delivery-msg {
+    color: #298622;
+}
 .error {
     color:rgba(255, 0, 0, 0.41);
 }

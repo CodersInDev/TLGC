@@ -17,6 +17,15 @@
             e.preventDefault();
         });
 
+        
+        function validatePostcode(postcode) { 
+
+            var regPostcode = /^([a-zA-Z]){1}([0-9][0-9]|[0-9]|[a-zA-Z][0-9][a-zA-Z]|[a-zA-Z][0-9][0-9]|[a-zA-Z][0-9]){1}([ ])([0-9][a-zA-z][a-zA-z]){1}$/;
+            return regPostcode.test(postcode);
+        };
+
+        jQuery.validator.addMethod("validatorPostCode",validatePostcode, "Please specify the correct domain for your documents");
+
         $('#campaign-create').validate({
             rules: {
                 initiatorName: {
@@ -47,7 +56,8 @@
                     required: true
                 },
                 postCode: {
-                    required: true
+                    required: true,
+                    validatorPostCode: true 
                 },
                 deliveryDate: {
                     required: true
@@ -85,7 +95,8 @@
                     required: 'Please enter an address'
                 },
                 postCode: {
-                    required: 'Please enter post code'
+                    required: 'Please enter postcode',
+                    validatorPostCode: 'Please enter a valid postcode'
                 },
                 deliveryDate: {
                     required: 'Pick your delivery date'
@@ -99,6 +110,46 @@
 
         $('#donation-btn-slide').click(function () {
             $('.formDonate-slide').slideDown();
+        });
+
+        var formatDate = function (date) {
+
+            var dateArray = date.split('-');
+            var newDate = dateArray[2] + '-' + dateArray[1] + '-' + dateArray[0];
+            return  newDate;
+        }
+
+        var deliveryOffset = function (userDate) {
+
+            var deliveryDate =  new Date(userDate);
+            var offset;
+            var closingDate;
+            var closingDateText;
+
+            //saturday // friday // thursday
+            if (deliveryDate.getDay() === 6 || deliveryDate.getDay() === 5 || deliveryDate.getDay() === 4) {
+                offset = 3;
+            
+            //Monday // tuesday //wednesday
+            } else if (deliveryDate.getDay() === 3 || deliveryDate.getDay() === 2 || deliveryDate.getDay() === 1) {
+                offset = 5;
+            //sunday
+            } else if (deliveryDate.getDay() === 0){
+                offset = 4;
+            }
+            
+            closingDate = new Date(deliveryDate);
+            closingDate.setDate(deliveryDate.getDate() - offset);
+
+            closingDateText = closingDate.toDateString() + ' at 7pm';
+            return closingDateText;
+        }
+
+        $('#datepicker').on('change', function () {
+            var userInputDate = $('#datepicker').val();
+            var finalClosingDate = 'Your gift campaign will end on ' + deliveryOffset(formatDate(userInputDate));
+
+            $('#delivery-msg').text(finalClosingDate);
         });
 
         // var form = $("#donationForm");
