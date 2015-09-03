@@ -23,6 +23,7 @@ body {
   color: #fff;
   border: none;
 }
+
 .btn-contact {
     margin-left: 20px;
 }
@@ -189,6 +190,15 @@ table, form{
 }
 
 /******** End Donate page *********/
+
+/******** Admin page *******/
+
+li {
+    list-style-type: none;
+}
+
+/******** End Admin page *******/
+
 
 @media(max-width:360px){
 
