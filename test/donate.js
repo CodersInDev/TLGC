@@ -13,7 +13,7 @@ it('checks the route /donate returns 200 status code when requested', function (
     Server.init(0, function (err, server) {
 
         expect(err).to.not.exist();
-        server.inject('/donate', function (res) {
+        server.inject('/donate/E1Su8Mep', function (res) {
 
             expect(res.statusCode).to.equal(200);
         });

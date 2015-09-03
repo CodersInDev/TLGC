@@ -38,9 +38,9 @@
                         <div class="col-xs-12 ">
                             <select name="reasonForLeaving" class="form-control dropdown">
                                 <option disabled selected value="">Reason for leaving</option>
-                                <option {{{ selectOption reasonForLeaving "option1"}}} value="option1">option1</option>
-                                <option {{{ selectOption reasonForLeaving "option2"}}} value="option2">option2</option>
-                                <option {{{ selectOption reasonForLeaving "option3"}}} value="option3">option3</option>
+                                <option {{{ validateValue reasonForLeaving "option1" "selected"}}} value="option1">option1</option>
+                                <option {{{ validateValue reasonForLeaving "option2" "selected"}}} value="option2">option2</option>
+                                <option {{{ validateValue reasonForLeaving "option3" "selected"}}} value="option3">option3</option>
                             </select>
                         </div>
                     </div>
@@ -54,10 +54,10 @@
 
                         <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
                             <label class="radio-inline pull-left">
-                                <input {{{ checkedButton decision "youDecide"}}} type="radio" name="decision" id="youDecide" value="youDecide"> You decide
+                                <input {{{ validateValue decision "youDecide" "checked"}}} type="radio" name="decision" id="youDecide" value="youDecide"> You decide
                             </label>
                             <label class="radio-inline pull-right">
-                                <input {{{ checkedButton decision "weDecide"}}} type="radio" name="decision" id="weDecide" value="weDecide"> We decide
+                                <input {{{ validateValue decision "weDecide" "checked"}}} type="radio" name="decision" id="weDecide" value="weDecide"> We decide
                             </label>
                         </div>
                     </div>
@@ -76,14 +76,14 @@
                             <div class="pull-left">
                                 <select name="age" class="form-control dropdown">
                                     <option disabled selected value="">Age range</option>
-                                    <option {{{selectOption age "18" }}} value="18">Under 18</option>
-                                    <option {{{selectOption age "24" }}} value="24">18 - 24</option>
-                                    <option {{{selectOption age "30" }}} value="30">25 - 30</option>
-                                    <option {{{selectOption age "40" }}} value="40">31 - 40</option>
-                                    <option {{{selectOption age "50" }}} value="50">41 - 50</option>
-                                    <option {{{selectOption age "60" }}} value="60">51 - 60</option>
-                                    <option {{{selectOption age "61" }}} value="61">Over 60</option>
-                                    <option {{{selectOption age "0" }}} value="0">Don't know</option>
+                                    <option {{{validateValue age "Under 18" "selected"}}} value="Under 18">Under 18</option>
+                                    <option {{{validateValue age "18 - 24" "selected"}}} value="18 - 24">18 - 24</option>
+                                    <option {{{validateValue age "25 - 30" "selected"}}} value="25 - 30">25 - 30</option>
+                                    <option {{{validateValue age "31 - 40" "selected"}}} value="31 - 40">31 - 40</option>
+                                    <option {{{validateValue age "41 - 50" "selected"}}} value="41 - 50">41 - 50</option>
+                                    <option {{{validateValue age "51 - 60" "selected"}}} value="51 - 60">51 - 60</option>
+                                    <option {{{validateValue age "Over 60" "selected"}}} value="Over 60">Over 60</option>
+                                    <option {{{validateValue age "Don't know" "selected"}}} value="Don't know">Don't know</option>
                                 </select>
                             </div>
                         </div>
@@ -91,8 +91,8 @@
                             <div class="pull-right">
                                 <select name="gender" class="form-control dropdown">
                                     <option disabled selected value="">Gender</option>
-                                    <option {{{selectOption gender 'f' }}} value="f">Female</option>
-                                    <option {{{selectOption gender 'm' }}} value="m">Male</option>
+                                    <option {{{validateValue gender 'f' "selected"}}} value="f">Female</option>
+                                    <option {{{validateValue gender 'm' "selected"}}} value="m">Male</option>
                                 </select>
                             </div>
                         </div>

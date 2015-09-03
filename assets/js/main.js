@@ -96,5 +96,39 @@
                 }
             }
         });
+
+
+        // var form = $("#donationForm");
+        //
+        // var handler = StripeCheckout.configure({
+        //     key: 'pk_test_WSuxNTQrLz8NVZcI4LiFkeLS',
+        //     locale: 'auto',
+        //     token: function(token) {
+        //         // Use the token to create the charge with a server-side script.
+        //         // You can access the token ID with `token.id`
+        //         console.log(token);
+        //         form.append($('<input type=hidden name="stripeTokenId" />').val(token.id));
+        //         form.append($('<input type=hidden name="donationEmail" />').val(token.email));
+        //         form.submit();
+        //     }
+        // });
+        //
+        // $('#customButton').on('click', function(e) {
+        // // Open Checkout with further options
+        // handler.open({
+        //   name: 'Demo Site',
+        //   description: '2 widgets',
+        //   currency: "gbp",
+        //   amount: $("#donationAmount").val() * 100
+        // });
+        //     e.preventDefault();
+        // });
+        //
+        // // Close Checkout on page navigation
+        // $(window).on('popstate', function() {
+        //     handler.close();
+        // });
+
+
     });
 })();

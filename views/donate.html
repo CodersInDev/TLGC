@@ -2,7 +2,7 @@
 
 <div id="strapline">
     <div class="container">
-        <h1>{{leaverName}}'s Leaving Gift</h1>
+        <h1>{{campaign.leaverName}}'s Leaving Gift</h1>
     </div>
 </div>
 
@@ -25,10 +25,10 @@
                 Initiated by:
             </div>
             <div class="col-xs-6 col-sm-6 col-md-3">
-                {{initiatorName}}
+                {{campaign.initiatorName}}
             </div>
             <div class="col-xs-12 col-sm-3 col-md-2 col-md-offset-1">
-                Total so far: <span class="badge badge-total">£ 78</span>
+                Total so far: <span class="badge badge-total">£ {{campaign.totalAmount}}</span>
             </div>
         </div>
         <div class="row atAGlance-row">
@@ -36,7 +36,7 @@
                 Closing date:
             </div>
             <div class="col-xs-6 col-sm-6 col-md-3">
-                21 August 2015
+                {{campaign.closedAt}}
             </div>
             <div class="col-xs-12 col-sm-3 col-md-2 col-md-offset-1 atAGlance-share">
                 <span class="badge badge-donate">Share</span>
@@ -54,7 +54,30 @@
     </div>
 </div>
 
+
 <div class="formDonate container">
+        <form action="/donate/{{campaign.urlId}}" method="POST" class="form-inline" id="donationForm">
+            <div class="col-xs-12 col-sm-offset-1 col-md-offset-3">
+                <div class="form-group">
+                    <input type="text" name="donationName" class="form-control donate" id="exampleInputName2" placeholder="Name">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" name="donationMessage" class="form-control donate" id="exampleInputEmail2" placeholder="Message">
+                </div>
+                <div class="form-group">
+                  <label for="donationAmount">£</label>
+                    <input type="number" name="donationAmount" class="form-control donate" id="donationAmount" placeholder="Amount">
+                </div>
+
+                <button type="button" class="btn donate-btn" id="customButton">Donate</button>
+            </div>
+        </form>
+</div>
+
+
+
+<!-- <div class="formDonate container">
     <form class="form-inline">
         <div class="col-xs-12 col-sm-offset-1 col-md-offset-3">
             <div class="form-group">
@@ -68,7 +91,9 @@
             <button type="submit" class="btn donate-btn">Donate</button>
         </div>
     </form>
-</div>
+</div> -->
+
+
 
 
 <div class="container">
@@ -88,53 +113,24 @@
                 </tr>
             </thead>
             <tbody>
-                <tr class="">
-                    <td>
-                        Simon
-                    </td>
-                    <td>
-                        Tu me manque
-                    </td>
-                    <td>
-                        £25
-                    </td>
-                </tr>
-                <tr class="">
-                    <td>
-                        Claire
-                    </td>
-                    <td>
-                        I miss you
-                    </td>
-                    <td>
-                        £25
-                    </td>
-                </tr>
-                <tr class="">
-                    <td>
-                        Anita
-                    </td>
-                    <td>
-                        I miss you even more
-                    </td>
-                    <td>
-                        £50
-                    </td>
-                </tr>
-                <tr class="">
-                    <td>
-                        Alex
-                    </td>
-                    <td>
-                        Who??
-                    </td>
-                    <td>
-                        £5
-                    </td>
-                </tr>
+                {{#each donors}}
+                    <tr class="">
+                        <td>
+                            {{name}}
+                        </td>
+                        <td>
+                            {{message}}
+                        </td>
+                        <td>
+                            {{amout}}
+                        </td>
+                    </tr>
+                {{/each}}
             </tbody>
         </table>
    </div>
 </div>
 
+
 {{>footer}}
+<script src="https://checkout.stripe.com/checkout.js"></script>
