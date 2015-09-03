@@ -88,6 +88,10 @@ footer {
 
 /******** Campaign page *********/
 
+.error {
+    color:rgba(255, 0, 0, 0.41);
+}
+
 ::-webkit-input-placeholder {
    text-align: center;
 }
