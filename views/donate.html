@@ -2,7 +2,7 @@
 
 <div id="strapline">
     <div class="container">
-        <h1>Dan's Leaving Gift</h1>
+        <h1>{{campaign.leaverName}}'s Leaving Gift</h1>
     </div>
 </div>
 
@@ -25,10 +25,10 @@
                 Initiated by:
             </div>
             <div class="col-xs-6 col-sm-6 col-md-3">
-                Alex
+                {{campaign.initiatorName}}
             </div>
             <div class="col-xs-12 col-sm-3 col-md-2 col-md-offset-1">
-                Total so far: <span class="badge badge-total">£ 78</span>
+                Total so far: <span class="badge badge-total">£ {{campaign.totalAmount}}</span>
             </div>
         </div>
         <div class="row atAGlance-row">
@@ -36,10 +36,12 @@
                 Closing date:
             </div>
             <div class="col-xs-6 col-sm-6 col-md-3">
-                21 August 2015
+                {{campaign.closedAt}}
             </div>
             <div class="col-xs-12 col-sm-3 col-md-2 col-md-offset-1 atAGlance-share">
-                <span class="badge badge-donate">Share</span>
+                <!-- <span class="badge badge-donate">Share</span> -->
+                <a class="badge badge-donate" href="mailto:contact@leavinggiftcompany.co.uk?subject={{campaign.leaverName}}'s%20leaving%20gift&amp;body=Hi!%20You've%20been%20invited%20to%20donate%20to%20{{campaign.leaverName}}'s%20leaving%20gift.%20%0A%0AYou%20can%20access%20the%20donation%20page%20below%20until%20{{campaign.closedAt}}%20by%20following%20this%20link%3A%0A%0A{{campaign.donationPage}}%0A%0AFor%20more%20information%20about%20The%20Leaving%20gift%20company%2C%20visit%20https%3A%2F%2Ftlgc.herokuapp.com%0A%0A" target="_blank">Share</a>
+
             </div>
         </div>
     </div>
@@ -53,10 +55,24 @@
         Lorem Ipsum is simply dummy text of the printing lorem lorem</p>
     </div>
 </div>
+<div class="logo-section">
+<div class="container">
+    <div class="row">
+            <div class="col-xs-12">
+                <button id="donation-btn-slide" class="btn btn-default">Click to make a donation</button>
+            </div>
+        </div>
+        <p>
+            {{paymentDone}}
+        </p>
+</div>
+</div>
 
-<div class="formDonate container">
+
+{{>stripeForm}}
+<!-- <div class="formDonate container">
     <form class="form-inline">
-        <div class="col-xs-12 col-sm-offset-1 col-md-offset-3">
+        <div class="col-xs-12 col-sm-offset-1 col-md-offset-1">
             <div class="form-group">
                 <input type="text" class="form-control donate" id="exampleInputName2" placeholder="Name">
             </div>
@@ -65,10 +81,15 @@
                 <input type="text" class="form-control donate" id="exampleInputEmail2" placeholder="Message">
             </div>
 
+             <div class="form-group">
+                <label for="donationAmount">£</label>
+                <input type="number" name="donationAmount" class="form-control donate" id="donationAmount" placeholder="Amount">
+            </div>
+
             <button type="submit" class="btn donate-btn">Donate</button>
         </div>
     </form>
-</div>
+</div> -->
 
 
 <div class="container">
@@ -88,53 +109,23 @@
                 </tr>
             </thead>
             <tbody>
-                <tr class="">
-                    <td>
-                        Simon
-                    </td>
-                    <td>
-                        Tu me manque
-                    </td>
-                    <td>
-                        £25
-                    </td>
-                </tr>
-                <tr class="">
-                    <td>
-                        Claire
-                    </td>
-                    <td>
-                        I miss you
-                    </td>
-                    <td>
-                        £25
-                    </td>
-                </tr>
-                <tr class="">
-                    <td>
-                        Anita
-                    </td>
-                    <td>
-                        I miss you even more
-                    </td>
-                    <td>
-                        £50
-                    </td>
-                </tr>
-                <tr class="">
-                    <td>
-                        Alex
-                    </td>
-                    <td>
-                        Who??
-                    </td>
-                    <td>
-                        £5
-                    </td>
-                </tr>
+                {{#each donors}}
+                    <tr class="">
+                        <td>
+                            {{name}}
+                        </td>
+                        <td>
+                            {{message}}
+                        </td>
+                        <td>
+                            {{amout}}
+                        </td>
+                    </tr>
+                {{/each}}
             </tbody>
         </table>
    </div>
 </div>
+
 
 {{>footer}}

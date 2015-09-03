@@ -3,13 +3,13 @@
     <footer id="donate-footer">
         <div class="row copyright">
             <div class="col-xs-4">
-                <p class="pull-left footer-date">Closing date: 24 August 2015</p>
+                <p class="pull-left footer-date">{{campaign.closedAt}}</p>
             </div>
             <div class="col-xs-4">
                 <p class="text-center"><a href="#"><span class="badge footer-share">Share</span></a></p>
             </div>
             <div class="col-xs-4">
-                <p class="pull-right footer-total">Total: <span class="badge">£ 42</span></p>
+                <p class="pull-right footer-total">Total: <span class="badge">£{{campaign.totalAmount}}</span></p>
             </div>
         </div>
     </footer>
