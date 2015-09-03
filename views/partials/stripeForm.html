@@ -1,5 +1,26 @@
-<form action="" method="POST" id="payment-form">
+<form action="/stripe" method="POST" id="payment-form">
   <span class="payment-errors"></span>
+
+  <div class="form-row">
+    <label>
+      <span>Name</span>
+      <input type="text" name="name"/>
+    </label>
+  </div>
+
+  <div class="form-row">
+    <label>
+      <span>Message</span>
+      <input type="textarea" name="message"/>
+    </label>
+  </div>
+
+  <div class="form-row">
+    <label>
+      <span>Amount</span>
+      <input type="number" name="amount"/>
+    </label>
+  </div>
 
   <div class="form-row">
     <label>
@@ -26,4 +47,3 @@
 
   <button type="submit">Submit Payment</button>
 </form>
-
