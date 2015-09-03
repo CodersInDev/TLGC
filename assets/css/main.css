@@ -23,7 +23,10 @@ body {
   color: #fff;
   border: none;
 }
-.navbar-btn:hover, .create-btn:hover, .btn-home:hover, .start_campaign:hover, .share-btn:hover {
+.btn-contact {
+    margin-left: 20px;
+}
+.navbar-btn:hover, .create-btn:hover, .btn-home:hover, .start_campaign:hover, .share-btn:hover, #donation-btn-slide, .submit-payment {
   background-color: #298622;
   color: #fff;
 }
@@ -36,7 +39,7 @@ body {
     margin: 20px auto;
     padding: 10px 40px;
 }
-.start_campaign, .share-btn, .donate-btn {
+.start_campaign, .share-btn, .donate-btn, #donation-btn-slide, .submit-payment {
     background-color: #3ba933;
     color: #fff;
     border: none;
@@ -87,7 +90,9 @@ footer {
 
 
 /******** Campaign page *********/
-
+#delivery-msg {
+    color: #298622;
+}
 .error {
     color:rgba(255, 0, 0, 0.41);
 }
@@ -121,6 +126,10 @@ footer {
 /******** End Campaign page *********/
 
 /******** Donate page *********/
+.formDonate-slide {
+    margin-top:20px;
+    display: none;
+}
 #strapline-donate{
     text-align: center;
     padding-top: 30px;
