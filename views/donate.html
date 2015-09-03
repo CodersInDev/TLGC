@@ -54,32 +54,10 @@
     </div>
 </div>
 
-
-<div class="formDonate container">
-        <form action="/donate/{{campaign.urlId}}" method="POST" class="form-inline" id="donationForm">
-            <div class="col-xs-12 col-sm-offset-1 col-md-offset-3">
-                <div class="form-group">
-                    <input type="text" name="donationName" class="form-control donate" id="exampleInputName2" placeholder="Name">
-                </div>
-
-                <div class="form-group">
-                    <input type="text" name="donationMessage" class="form-control donate" id="exampleInputEmail2" placeholder="Message">
-                </div>
-                <div class="form-group">
-                  <label for="donationAmount">£</label>
-                    <input type="number" name="donationAmount" class="form-control donate" id="donationAmount" placeholder="Amount">
-                </div>
-
-                <button type="button" class="btn donate-btn" id="customButton">Donate</button>
-            </div>
-        </form>
-</div>
-
-
-
+{{>stripeForm}}
 <!-- <div class="formDonate container">
     <form class="form-inline">
-        <div class="col-xs-12 col-sm-offset-1 col-md-offset-3">
+        <div class="col-xs-12 col-sm-offset-1 col-md-offset-1">
             <div class="form-group">
                 <input type="text" class="form-control donate" id="exampleInputName2" placeholder="Name">
             </div>
@@ -88,12 +66,15 @@
                 <input type="text" class="form-control donate" id="exampleInputEmail2" placeholder="Message">
             </div>
 
+             <div class="form-group">
+                <label for="donationAmount">£</label>
+                <input type="number" name="donationAmount" class="form-control donate" id="donationAmount" placeholder="Amount">
+            </div>
+
             <button type="submit" class="btn donate-btn">Donate</button>
         </div>
     </form>
 </div> -->
-
-
 
 
 <div class="container">
@@ -133,4 +114,9 @@
 
 
 {{>footer}}
-<script src="https://checkout.stripe.com/checkout.js"></script>
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<script src="/assets/js/stripeKey.js"></script>
+<script src="/assets/js/stripeHandler.js"></script>
+
+
+
