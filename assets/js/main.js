@@ -97,6 +97,9 @@
             }
         });
 
+        $('#donation-btn-slide').click(function () {
+            $('.formDonate-slide').slideDown();
+        });
 
         // var form = $("#donationForm");
         //

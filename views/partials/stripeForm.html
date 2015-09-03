@@ -1,49 +1,90 @@
-<form action="/stripe" method="POST" id="payment-form">
-  <span class="payment-errors"></span>
+<div class="formDonate-slide container">
+    <form action="/stripe/{{urlId}}" method="POST" id="payment-form">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+            <span class="payment-errors"></span>
 
-  <div class="form-row">
-    <label>
-      <span>Name</span>
-      <input type="text" name="name"/>
-    </label>
-  </div>
+            <div class="form-inline">
+                <div class="form-group">
+                     <div class="col-xs-12 col-sm-6 ">
+                    <input type="text" name="name" class="form-control" placeholder="Name">
+                    </div>
+                </div>
 
-  <div class="form-row">
-    <label>
-      <span>Message</span>
-      <input type="textarea" name="message"/>
-    </label>
-  </div>
+                
+                <div class="form-group">
+                <div class="col-xs-12 col-sm-6 ">
+                    <input type="number" name="amount" class="form-control" placeholder="Amount">
+                    </div>
+                </div>
+            </div>
+            <p></p>
 
-  <div class="form-row">
-    <label>
-      <span>Amount</span>
-      <input type="number" name="amount"/>
-    </label>
-  </div>
 
-  <div class="form-row">
-    <label>
-      <span>Card Number</span>
-      <input type="text" size="20" data-stripe="number"/>
-    </label>
-  </div>
 
-  <div class="form-row">
-    <label>
-      <span>CVC</span>
-      <input type="text" size="4" data-stripe="cvc"/>
-    </label>
-  </div>
+            <div class="form-group">
+                <div class="col-xs-12 col-sm-9">
+                    <input type="text" name="message" class="form-control" placeholder="Message">
+                </div>
+            </div>
+            
+        
+            
+            <div class="col-xs-12">
+            <p></p>
+                <div class="form-inline">
 
-  <div class="form-row">
-    <label>
-      <span>Expiration (MM/YYYY)</span>
-      <input type="text" size="2" data-stripe="exp-month"/>
-    </label>
-    <span> / </span>
-    <input type="text" size="4" data-stripe="exp-year"/>
-  </div>
+                    <div class="form-group">
+                        <input type="text" size="20" data-stripe="number" class="form-control" placeholder="Card number">
+                    </div>
 
-  <button type="submit">Submit Payment</button>
-</form>
+
+                    <div class="form-group">
+
+                        <input type="text" size="4" data-stripe="cvc" class="form-control" placeholder="CVC">
+                    </div>
+
+
+                    <div class="form-group">
+
+
+                        <input type="text" size="2" data-stripe="exp-month" class="form-control" placeholder="MM"/>
+                        <span> / </span>
+                        <input type="text" size="4" data-stripe="exp-year" class="form-control" placeholder="YYYY"/>
+
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-xs-12">
+            <p></p>
+                <button class="btn btn-default submit-payment" type="submit">Submit Payment</button>
+            </div>
+        
+        
+        </div>
+            
+    </form>       
+</div>
+
+
+<!-- <div class="formDonate container">
+    <form class="form-inline">
+        <div class="col-xs-12 col-sm-offset-1 col-md-offset-1">
+            <div class="form-group">
+                <input type="text" class="form-control donate" id="exampleInputName2" placeholder="Name">
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control donate" id="exampleInputEmail2" placeholder="Message">
+            </div>
+
+             <div class="form-group">
+                <label for="donationAmount">£</label>
+                <input type="number" name="donationAmount" class="form-control donate" id="donationAmount" placeholder="Amount">
+            </div>
+
+            <button type="submit" class="btn donate-btn">Donate</button>
+        </div>
+    </form>
+</div> -->
