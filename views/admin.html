@@ -8,63 +8,80 @@
         <thead>
             <tr>
                 <th data-field="id">Campaign ID</th>
-                <th data-field="name">Initiator</th>
+                <th data-field="email">Initiator</th>
+                <th data-field="name">Email</th>
                 <th data-field="price">Date</th>
                 <th data-field="price">Closing Date</th>
                 <th data-field="price">Leaver</th>
-                <th data-field="price">Reciepient</th>
+                <th data-field="price">Recipient</th>
                 <th data-field="price">Address 1</th>
                 <th data-field="price">Address 2</th>
                 <th data-field="price">Post Code</th>
                 <th data-field="price">Gift proposition</th>
-                <th data-field="price">Doners/Messages</th>
+                <th data-field="price">Donors/Messages</th>
                 <th data-field="price">Total</th>
             </tr>
         </thead>
 
         <tbody>
+            {{#each campaigns}}
             <tr class="">
                 <td>
-                    1
+                    {{urlId}}
                 </td>
                 <td>
-                    Simon
+                    {{initiatorName}}
                 </td>
                 <td>
-                    12.09.2015
+                    {{email}}
                 </td>
                 <td>
-                    24.09.2015
+                    {{createdAt}}
                 </td>
                 <td>
-                    Alex
+                    {{closeAt}}
                 </td>
                 <td>
-                    Anita
+                    {{leaverName}}
                 </td>
                 <td>
-                    24 Palmers Road
+                    {{nameOfRecipient}}
                 </td>
                 <td>
-                    London
+                    {{address1}}
                 </td>
                 <td>
-                    ES3 4TH
-                <td>
-                    personal beer mug                       
+                    {{address2}}
                 </td>
                 <td>
-                    <li>Claire - I miss you</li>
-                    <li>Kate - Good luck</li>
-                    <li>Sandra - Good luck</li>
+                    {{postCode}}
+                <td>
+                    {{giftProposition}}
                 </td>
                 <td>
-                    £25
+                    {{#each donors}}
+                    <ul>
+                        <li>{{name}} - {{message}} - £{{amount}}</li>
+                    </ul>
+                    {{/each}}
+                </td>
+                <td>
+                    {{totalAmount}}
                 </td>
             </tr>
+            {{/each}}
         </tbody>
-    
+
     </table>
+</div>
+
+<div class="">
+    <ul>
+
+        <li>{{urlId}}</li>
+
+    </ul>
+
 </div>
 
 
