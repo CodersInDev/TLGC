@@ -203,7 +203,7 @@ table, form{
 }
 #donate-footer {
     position: fixed;
-    height: 70px;
+    height: 80px;
 }
 
 .footer-date {
@@ -258,6 +258,12 @@ li {
     .formDonate .donate-btn {
         display: block;
         width: 100%;
+    }
+    #payment-form button {
+    margin-left: 0ch;
+    }
+    #donate-footer {
+        height: 100px;
     }
 }
 
