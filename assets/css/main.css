@@ -173,6 +173,7 @@ footer {
 
 .table-donors {
     margin-top: 60px;
+    margin-bottom: 50px;
 }
 table, form{
     /*width: auto !important;*/
@@ -202,7 +203,7 @@ table, form{
 }
 #donate-footer {
     position: fixed;
-    height: 80px;
+    height: 70px;
 }
 
 .footer-date {
@@ -225,6 +226,9 @@ table, form{
 
 /******** Admin page *******/
 
+.login {
+    text-align: center;
+}
 li {
     list-style-type: none;
 }
