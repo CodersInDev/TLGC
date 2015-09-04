@@ -17,8 +17,8 @@
             e.preventDefault();
         });
 
-        
-        function validatePostcode(postcode) { 
+
+        var validatePostcode = function (postcode) {
 
             var regPostcode = /^([a-zA-Z]){1}([0-9][0-9]|[0-9]|[a-zA-Z][0-9][a-zA-Z]|[a-zA-Z][0-9][0-9]|[a-zA-Z][0-9]){1}([ ])([0-9][a-zA-z][a-zA-z]){1}$/;
             return regPostcode.test(postcode);
@@ -57,7 +57,7 @@
                 },
                 postCode: {
                     required: true,
-                    validatorPostCode: true 
+                    validatorPostCode: true
                 },
                 deliveryDate: {
                     required: true
@@ -117,7 +117,9 @@
             var dateArray = date.split('-');
             var newDate = dateArray[2] + '-' + dateArray[1] + '-' + dateArray[0];
             return  newDate;
-        }
+        };
+
+
 
         var deliveryOffset = function (userDate) {
 
@@ -129,7 +131,7 @@
             //saturday // friday // thursday
             if (deliveryDate.getDay() === 6 || deliveryDate.getDay() === 5 || deliveryDate.getDay() === 4) {
                 offset = 3;
-            
+
             //Monday // tuesday //wednesday
             } else if (deliveryDate.getDay() === 3 || deliveryDate.getDay() === 2 || deliveryDate.getDay() === 1) {
                 offset = 5;
@@ -137,52 +139,22 @@
             } else if (deliveryDate.getDay() === 0){
                 offset = 4;
             }
-            
+
             closingDate = new Date(deliveryDate);
             closingDate.setDate(deliveryDate.getDate() - offset);
+            return closingDate;
+        };
 
-            closingDateText = closingDate.toDateString() + ' at 7pm';
-            return closingDateText;
-        }
+        //generate the closeAt date
 
         $('#datepicker').on('change', function () {
             var userInputDate = $('#datepicker').val();
-            var finalClosingDate = 'Your gift campaign will end on ' + deliveryOffset(formatDate(userInputDate));
+            var closeAt = deliveryOffset(formatDate(userInputDate));
+            var finalClosingDate = 'Your gift campaign will end on ' + closeAt.toDateString() + ' at 7pm';
 
             $('#delivery-msg').text(finalClosingDate);
+            $('#closeAt').val(closeAt.getDate() + '-' + (closeAt.getMonth() + 1) + '-' + closeAt.getUTCFullYear());
         });
-
-        // var form = $("#donationForm");
-        //
-        // var handler = StripeCheckout.configure({
-        //     key: 'pk_test_WSuxNTQrLz8NVZcI4LiFkeLS',
-        //     locale: 'auto',
-        //     token: function(token) {
-        //         // Use the token to create the charge with a server-side script.
-        //         // You can access the token ID with `token.id`
-        //         console.log(token);
-        //         form.append($('<input type=hidden name="stripeTokenId" />').val(token.id));
-        //         form.append($('<input type=hidden name="donationEmail" />').val(token.email));
-        //         form.submit();
-        //     }
-        // });
-        //
-        // $('#customButton').on('click', function(e) {
-        // // Open Checkout with further options
-        // handler.open({
-        //   name: 'Demo Site',
-        //   description: '2 widgets',
-        //   currency: "gbp",
-        //   amount: $("#donationAmount").val() * 100
-        // });
-        //     e.preventDefault();
-        // });
-        //
-        // // Close Checkout on page navigation
-        // $(window).on('popstate', function() {
-        //     handler.close();
-        // });
-
 
     });
 })();

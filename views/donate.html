@@ -36,7 +36,7 @@
                 Closing date:
             </div>
             <div class="col-xs-6 col-sm-6 col-md-3">
-                {{campaign.closedAt}}
+                {{campaign.closeAt}}
             </div>
             <div class="col-xs-12 col-sm-3 col-md-2 col-md-offset-1 atAGlance-share">
                 <!-- <span class="badge badge-donate">Share</span> -->
@@ -109,7 +109,7 @@
                 </tr>
             </thead>
             <tbody>
-                {{#each donors}}
+                {{#each campaign.donors}}
                     <tr class="">
                         <td>
                             {{name}}
@@ -118,7 +118,7 @@
                             {{message}}
                         </td>
                         <td>
-                            {{amout}}
+                            {{amount}}
                         </td>
                     </tr>
                 {{/each}}
