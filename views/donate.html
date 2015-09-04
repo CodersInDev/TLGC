@@ -2,7 +2,7 @@
 
 <div id="strapline">
     <div class="container">
-        <h1>{{campaign.leaverName}}'s Leaving Gift</h1>
+        <h1>{{campaign.leaverName}}'s</h1>
     </div>
 </div>
 
@@ -10,7 +10,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <h1 id="logo-donate">
+                <h1 id="logo-donate2">
                     <a href="">The Leaving Gift Company</a>
                 </h1>
             </div>
@@ -40,7 +40,7 @@
             </div>
             <div class="col-xs-12 col-sm-3 col-md-2 col-md-offset-1 atAGlance-share">
                 <!-- <span class="badge badge-donate">Share</span> -->
-                <a class="badge badge-donate" href="mailto:contact@leavinggiftcompany.co.uk?subject={{campaign.leaverName}}'s%20leaving%20gift&amp;body=Hi!%20You've%20been%20invited%20to%20donate%20to%20{{campaign.leaverName}}'s%20leaving%20gift.%20%0A%0AYou%20can%20access%20the%20donation%20page%20below%20until%20{{campaign.closedAt}}%20by%20following%20this%20link%3A%0A%0A{{campaign.donationPage}}%0A%0AFor%20more%20information%20about%20The%20Leaving%20gift%20company%2C%20visit%20https%3A%2F%2Ftlgc.herokuapp.com%0A%0A" target="_blank">Share</a>
+                <a data-toggle="tooltip" data-placement="top" title="Invite colleagues to this Leaving Gift registry by sending a pre-populated email. All you need to do is add the email addresses." class="badge badge-donate" href="mailto:info@theleavinggift.com?subject={{campaign.leaverName}}'s%20leaving%20gift&amp;body=Hi!%20You've%20been%20invited%20to%20donate%20to%20{{campaign.leaverName}}'s%20leaving%20gift.%20%0A%0AYou%20can%20access%20the%20donation%20page%20below%20until%20{{campaign.closedAt}}%20by%20following%20this%20link%3A%0A%0A{{campaign.donationPage}}%0A%0AFor%20more%20information%20about%20The%20Leaving%20gift%20company%2C%20visit%20https%3A%2F%2Fwww.theleavinggift.com%0A%0A" target="_blank">Invite</a>
 
             </div>
         </div>
@@ -49,10 +49,9 @@
 
 
 <div id="strapline-donate">
-    <div class="container">
-        <p>Lorem Ipsum is simply dummy text of the printing Lorem Ipsum is simply dummy<br/>
-        Lorem Ipsum is simply dummy text of the printing lorem is a dummy text lorem <br/>
-        Lorem Ipsum is simply dummy text of the printing lorem lorem</p>
+    <div class="container"> 
+        <p class="lead">Please enter your donation towards {{campaign.leaverName}}'s leaving gift.<br/>
+        Don't forget to add your name and a message that will appear on the card accompanying the gift.</p>
     </div>
 </div>
 <div class="logo-section">
@@ -92,7 +91,7 @@
 </div> -->
 
 
-<div class="container">
+<div class="container table-donors">
    <div class="col-md-12">
        <table class="table table-striped table-hover">
             <thead>

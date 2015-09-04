@@ -1,15 +1,39 @@
 (function () {
 
     'use strict';
-
+ 
     $( document ).ready(function () {
+
 
         var d = new Date();
 
         $('.js_year').text(d.getFullYear());
 
+        $('[data-toggle="tooltip"]').tooltip();
+
+        var startDateOffset = function (date) { 
+            var deliveryDate = new Date(date);
+            var offset;
+            var closingDate; 
+            var closingDateText; 
+            //saturday // friday // thursday 
+            if (deliveryDate.getDay() === 6 || deliveryDate.getDay() === 5 || deliveryDate.getDay() === 4) { 
+                offset = 3; 
+                //Monday // tuesday //wednesday 
+            } 
+            else if (deliveryDate.getDay() === 3 || deliveryDate.getDay() === 2 || deliveryDate.getDay() === 1) { 
+                offset = 5; 
+            } else if (deliveryDate.getDay() === 0){ 
+                offset = 4; 
+            } 
+            closingDate = new Date(deliveryDate);
+            closingDate.setDate(deliveryDate.getDate() + 3 + offset);
+            return closingDate; 
+        };
+
         $( '#datepicker' ).datepicker({
-            dateFormat: 'dd-mm-yy'
+            dateFormat: 'dd-mm-yy',
+            minDate: startDateOffset(d)
         });
 
         $('#datepicker').keypress(function (e) {
@@ -20,7 +44,8 @@
 
         var validatePostcode = function (postcode) {
 
-            var regPostcode = /^([a-zA-Z]){1}([0-9][0-9]|[0-9]|[a-zA-Z][0-9][a-zA-Z]|[a-zA-Z][0-9][0-9]|[a-zA-Z][0-9]){1}([ ])([0-9][a-zA-z][a-zA-z]){1}$/;
+            postcode = postcode.replace(' ', '');
+            var regPostcode = /^([Gg][Ii][Rr] 0[Aa]{2})|((([A-Za-z][0-9]{1,2})|(([A-Za-z][A-Ha-hJ-Yj-y][0-9]{1,2})|(([AZa-z][0-9][A-Za-z])|([A-Za-z][A-Ha-hJ-Yj-y][0-9]?[A-Za-z]))))[0-9][A-Za-z]{2})$/;
             return regPostcode.test(postcode);
         };
 
@@ -104,6 +129,36 @@
                 tc: {
                     required: 'Please tick terms and condition'
 
+                }
+            }
+        });
+
+        $('#payment-form').validate({
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 2
+                },
+                amount: {
+                    required: true,
+                    digits: true,
+                    range: [1, 9999999999999]
+                },
+                message: {
+                    required: true
+                }
+            },
+            messages: {
+                name: {
+                    required: 'Please enter your name',
+                    minlength: 'Your name seems a bit short'
+                },
+                amount: {
+                    required: 'Please enter positive number',
+                    digits: "Please enter a valid number"
+                },
+                message: {
+                    required: 'Please enter your message'
                 }
             }
         });
