@@ -1,3 +1,4 @@
+{{>tc}}
 <div>
 {{#if donate}}
     <footer id="donate-footer">
@@ -9,51 +10,13 @@
                 <p class="text-center"><a href="mailto:info@theleavinggift.com?subject={{campaign.leaverName}}'s%20leaving%20gift&amp;body=Hi!%20You've%20been%20invited%20to%20donate%20to%20{{campaign.leaverName}}'s%20leaving%20gift.%20%0A%0AYou%20can%20access%20the%20donation%20page%20below%20until%20{{campaign.closedAt}}%20by%20following%20this%20link%3A%0A%0A{{campaign.donationPage}}%0A%0AFor%20more%20information%20about%20The%20Leaving%20gift%20company%2C%20visit%20https%3A%2F%2Fwww.theleavinggift.com%0A%0A" target="_blank"><span class="badge footer-share">Invite</span></a></p>
                 <p class="text-center">By using this registry page you agree to our <a href="#" data-toggle="modal" data-target="#termCondModal">Terms of Service</a></p>
 
-                   <!-- Modal -->
-                    <div class="modal fade" id="termCondModal" tabindex="-1" role="dialog" aria-labelledby="TLGC Terms and Conditions">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                    <h4 class="modal-title" id="myModalLabel">TLGC Terms and Conditions</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <p><strong>The Leaving Gift’s Terms of Service</strong></p>
-
-<p>These terms of service outline what The Leaving Gift Ltd does and how it operates. We run and maintain a website that provides a concierge service for collating, processing, choosing and delivering donations and messages on behalf of an initiator. This service charges a 10% fee for the administration and processing for the leaving gift and card. The 10% fee is taken from the total amount donated after the closing date on the registry page is passed. The remaining donation amount will be used to design, populate and deliver a card, and to choose and deliver a gift for the leaver.</p>
-<p>The Leaving Gift is a trading name of the local The Leaving Gift Ltd entity as identified in the country specific terms of service. The Leaving Gift Ltd operates www.theleavinggift.com (the "Website") and its associated services. These core terms of service (and the relevant country specific terms) (together the "Terms of Service") govern your use of the Website and its associated services. Please read these Terms of Service carefully. If you do not wish to be bound by these Terms of Service, you should not continue to use or access the Website or its associated services.</p>
-
-<p>These Terms of Service may change or be updated from time to time. It remains your responsibility to access and check these Terms of Service wherever you access the Website. The latest version of these Terms of Service will govern any future usage by you of the Website and its associated services</p>
-
-
-<p><strong>Returns</p></strong>
-
-<p>The Leaving Gift Ltd acts on behalf of the initiator to purchase a card and gift for the leaver. Leaving gift cards will not be eligible for refund or exchange. The leaving gift will be eligible for refund or exchange as per the retailers’ terms and conditions.</p>
-
-<p><strong>Insufficient funds collected</p></strong>
-
-<p>Once registry closes, if the total donated amount is insufficient to buy the pre-specified gift, The Leaving Gift will either a) choose an appropriate similar gift of lesser value or b) use donations to purchase vouchers from a well-established internet retailer. If total donated amount exceeds the value of the gift specified, The Leaving Gift will either a) buy vouchers with the additional money or b) buy an upgraded version of the specified gift. The Leaving Gift will only operate its services when total donations on each gift registry page equal, or exceed, 5 GBP by the registry closing date; total donations less than 5 GBP will be returned to the donators.</p>
-
-<p><strong>User conduct</p></strong>
-
-<p>If you build a gift registry page on The Leaving Gift, you must ensure that any information you provide to the public is accurate and not misleading. It is your responsibility to ensure that the content you are uploading on your page is not copyright-protected. If it is, you must obtain the copyright owner's written consent to use it. The Leaving Gift reserves the right to remove any copy from personal gift registry page, at its sole discretion and without notice if their copyright status is in any doubt. If you suspect a breach of copyright on the Website, please email us at info@theleavinggift.com.</p>
-                                </div>
-
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
             </div>
             <div class="col-xs-4">
                 <p class="pull-right footer-total">Total: <span class="badge">£{{campaign.totalAmount}}</span></p>
             </div>
         </div>
     </footer>
+
 {{else}}
     <footer>
            <div class="container">

@@ -205,6 +205,10 @@ table, form{
     font-size: 14px;
 }
 
+#termCondModal{
+    z-index: 99999;
+}
+
 /******** End Donate page *********/
 
 /******** Admin page *******/
