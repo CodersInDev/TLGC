@@ -1,7 +1,96 @@
+<div class="modal fade" id="stripeModal" tabindex="-1" role="dialog" aria-labelledby="TLGC Terms and Conditions">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><label aria-hidden="true">&times;</label></button>
+                <h4 class="modal-title" id="myModalLabel">Secure payment by Stripe</h4>
+            </div>
+            <div class="modal-body">
+                <div class="stripe-logo"><img src="/assets/img/stripe.png" /></div>
+                <br/>
+                <form action="/stripe/{{urlId}}" method="POST" id="payment-form">
+
+
+                      <label class="payment-errors"></label>
+
+                        
+                        <div class="form-row">
+                        <label>Name</label>
+                          
+                          <input type="text" size="20"name="name"/>
+                        
+                      </div>
+
+                      <div class="form-row">
+                       
+                          <label>Amount</label>
+                          <input type="number" size="20"name="amount"/>
+                     
+                      </div>
+
+                      <div class="form-row">
+                        
+                          <label>Message</label>
+                          <textarea name="message"></textarea>
+                        
+                      </div>
+
+                        
+                      <div class="form-row">
+                     
+                          <label>Card Number</label>
+                          <input type="text" size="20" data-stripe="number"/>
+                        
+                      </div>
+
+                      <div class="form-row">
+                       
+                          <label>CVC</label>
+                          <input type="text" size="4" data-stripe="cvc"/>
+                      
+                      </div>
+
+                      <div class="form-row">
+                        
+                          <label>Expiration (MM/YYYY)</label>
+                          <input type="text" size="2" data-stripe="exp-month"/>
+                      
+                        <span> / </span>
+                        <input type="text" size="4" data-stripe="exp-year"/>
+                      </div>
+                        <br/>
+                        <div>
+                            <button class="btn btn-default donation-btn" type="submit">Submit Payment</button>
+                      </div>
+                    </form>
+                    <br/>
+
+
+                    <p>Find out more about secure payment with Stripe <a href="https://stripe.com/gb/features">here</a></p>
+
+            
+
+       
+    </div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
 <div class="formDonate-slide container">
     <form action="/stripe/{{urlId}}" method="POST" id="payment-form">
-        <div class="col-xs-12 col-sm-8 col-md-8 col-md-offset-3">
-            <span class="payment-errors"></span>
+        <div class="col-xs-12 col-sm-8 col-md-8 col-md-offset-3" id="stripe-container">
+            <label class="payment-errors"></label>
             
 
             <div class="form-inline">
@@ -49,7 +138,7 @@
 
 
                         <input type="text" size="2" data-stripe="exp-month" class="form-control" placeholder="MM"/>
-                        <span> / </span>
+                        <label> / </label>
                         <input type="text" size="4" data-stripe="exp-year" class="form-control" placeholder="YYYY"/>
 
                     </div>
@@ -66,7 +155,7 @@
         </div>
             
     </form>       
-</div>
+</di -->
 
 
 <!-- <div class="formDonate container">

@@ -30,7 +30,7 @@ body {
 .btn-contact {
     margin-left: 20px;
 }
-.navbar-btn:hover, .create-btn:hover, .btn-home:hover, .start_campaign:hover, .share-btn:hover, #donation-btn-slide, .submit-payment {
+.navbar-btn:hover, .create-btn:hover, .btn-home:hover, .start_campaign:hover, .share-btn:hover, #donation-btn-slide:hover, .submit-payment:hover, .donation-btn:hover {
   background-color: #298622;
   color: #fff;
 }
@@ -43,7 +43,7 @@ body {
     margin: 20px auto;
     padding: 10px 40px;
 }
-.start_campaign, .share-btn, .donate-btn, #donation-btn-slide, .submit-payment {
+.start_campaign, .share-btn, .donate-btn, #donation-btn-slide, .submit-payment, .donation-btn {
     background-color: #3ba933;
     color: #fff;
     border: none;
@@ -135,7 +135,19 @@ footer {
 /******** End Campaign page *********/
 
 /******** Donate page *********/
-
+.stripe-logo {
+    margin:0 auto;
+    text-align: center;
+}
+#myModalLabel {
+    text-align: center;
+}
+#payment-form label, .donation-btn {
+    width: 21ch;
+}
+#payment-form button {
+    margin-left: 17ch;
+}
 .campaign-h1 {
     padding: 20px;
 }
@@ -160,7 +172,7 @@ footer {
 }
 
 .table-donors {
-    margin-top: 40px;
+    margin-top: 60px;
 }
 table, form{
     /*width: auto !important;*/

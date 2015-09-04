@@ -163,9 +163,9 @@
             }
         });
 
-        $('#donation-btn-slide').click(function () {
-            $('.formDonate-slide').slideDown();
-        });
+        // $('#donation-btn-slide').click(function () {
+        //     $('.formDonate-slide').slideDown();
+        // });
 
         var formatDate = function (date) {
 
