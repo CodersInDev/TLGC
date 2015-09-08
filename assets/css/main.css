@@ -6,9 +6,27 @@ body {
     padding-top: 50px;
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
-    margin-bottom: 50px;
+    padding-bottom: 100px;
 }
 
+.home {
+    background-color: rgba(55, 169, 52, 0.4);
+}
+
+.thumbnail {
+    background-color: rgba(55, 169, 52, 0);
+}
+
+hr {
+    border: none;
+    height: 5px;
+    background-color: #adadad;
+    margin: 0;
+}
+
+.colorWhite {
+    background-color: #FFF;
+}
 /********strapline********/
 #strapline {
   padding: 10px 15px;
@@ -90,7 +108,7 @@ footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height:60px;
+    /*height:60px;*/
 }
 .copyright p {
     padding-top: 10px;
@@ -131,6 +149,10 @@ footer {
 }
 .gender {
     min-width: 104px;
+}
+
+.deliveryDetails {
+    text-align: center;
 }
 /******** End Campaign page *********/
 
@@ -203,7 +225,7 @@ table, form{
 }
 #donate-footer {
     position: fixed;
-    height: 80px;
+    /*height: 80px;*/
 }
 
 .footer-date {
@@ -263,7 +285,7 @@ li {
     margin-left: 0ch;
     }
     #donate-footer {
-        height: 100px;
+        /*height: 100px;*/
     }
 }
 
