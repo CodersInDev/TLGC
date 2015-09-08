@@ -1,7 +1,7 @@
 (function () {
 
     'use strict';
- 
+
     $( document ).ready(function () {
 
 
@@ -11,29 +11,30 @@
 
         $('[data-toggle="tooltip"]').tooltip();
 
-        var startDateOffset = function (date) { 
+        var startDateOffset = function (date) {
             var deliveryDate = new Date(date);
             var offset;
-            var closingDate; 
-            var closingDateText; 
-            //saturday // friday // thursday 
-            if (deliveryDate.getDay() === 6 || deliveryDate.getDay() === 5 || deliveryDate.getDay() === 4) { 
-                offset = 3; 
-                //Monday // tuesday //wednesday 
-            } 
-            else if (deliveryDate.getDay() === 3 || deliveryDate.getDay() === 2 || deliveryDate.getDay() === 1) { 
-                offset = 5; 
-            } else if (deliveryDate.getDay() === 0){ 
-                offset = 4; 
-            } 
+            var closingDate;
+            var closingDateText;
+            //saturday // friday // thursday
+            if (deliveryDate.getDay() === 6 || deliveryDate.getDay() === 5 || deliveryDate.getDay() === 4) {
+                offset = 3;
+                //Monday // tuesday //wednesday
+            }
+            else if (deliveryDate.getDay() === 3 || deliveryDate.getDay() === 2 || deliveryDate.getDay() === 1) {
+                offset = 5;
+            } else if (deliveryDate.getDay() === 0){
+                offset = 4;
+            }
             closingDate = new Date(deliveryDate);
             closingDate.setDate(deliveryDate.getDate() + 3 + offset);
-            return closingDate; 
+            return closingDate;
         };
 
         $( '#datepicker' ).datepicker({
             dateFormat: 'dd-mm-yy',
-            minDate: startDateOffset(d)
+            minDate: startDateOffset(d),
+            beforeShowDay: $.datepicker.noWeekends
         });
 
         $('#datepicker').keypress(function (e) {
