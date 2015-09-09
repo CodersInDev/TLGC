@@ -1,5 +1,5 @@
 <div class="container">
-    <h1>List of campaigns</h1>
+    <h1 class='text-center'>List of campaigns</h1>
 </div>
 
 
@@ -13,10 +13,14 @@
                 <th data-field="price">Date</th>
                 <th data-field="price">Closing Date</th>
                 <th data-field="price">Leaver</th>
+                <th data-field="price">Age</th>
+                <th data-field="price">Gender</th>
+                <th data-field="price">Reason for leaving</th>
                 <th data-field="price">Recipient</th>
                 <th data-field="price">Address 1</th>
                 <th data-field="price">Address 2</th>
                 <th data-field="price">Post Code</th>
+                <th data-field="price">Decision</th>
                 <th data-field="price">Gift proposition</th>
                 <th data-field="price">Donors/Messages</th>
                 <th data-field="price">Total</th>
@@ -45,6 +49,15 @@
                     {{leaverName}}
                 </td>
                 <td>
+                    {{age}}
+                </td>
+                <td>
+                    {{gender}}
+                </td>
+                <td>
+                    {{reasonForLeaving}}
+                </td>
+                <td>
                     {{nameOfRecipient}}
                 </td>
                 <td>
@@ -55,6 +68,10 @@
                 </td>
                 <td>
                     {{postCode}}
+                </td>
+                <td>
+                    {{decision}}
+                </td>
                 <td>
                     {{giftProposition}}
                 </td>
