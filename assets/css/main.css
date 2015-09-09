@@ -1,32 +1,24 @@
+@font-face {
+    font-family: 'proximanovat-thin-webfont';
+    src: url('../font/proximanovat-thin-webfont.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'proximanova-black-webfont';
+    src: url('../font/proximanova-black-webfont.ttf') format('truetype');
+}
+
 html {
     position: relative;
     min-height: 100%;
 }
 body {
     padding-top: 50px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'proximanova-black-webfont', 'Montserrat', sans-serif;
     overflow-x: hidden;
     padding-bottom: 100px;
 }
 
-.home {
-    background-color: rgba(55, 169, 52, 0.4);
-}
-
-.thumbnail {
-    background-color: rgba(55, 169, 52, 0);
-}
-
-hr {
-    border: none;
-    height: 5px;
-    background-color: #adadad;
-    margin: 0;
-}
-
-.colorWhite {
-    background-color: #FFF;
-}
 /********strapline********/
 #strapline {
   padding: 10px 15px;
